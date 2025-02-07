@@ -44,18 +44,16 @@
     "BACKEND": {
       "RESTFUL_API": "Restful API / Backend",
       "GRAPHQL_API": "GraphQL API / Backend",
-      "AUTH": "AUTH / Backend",
-      "CASE": "CASE / Backend",
-      "COMPANY": "COMPANY / Backend",
-      "DELETE_REQUEST": "DELETE_REQUEST / Backend",
-      "DEPO": "DEPO / Backend",
-      "INVITATION": "INVITATION / Backend",
-      "LABEL": "LABEL / Backend",
-      "MEDICAL": "MEDICAL / Backend",
-      "USER": "USER / Backend",
+      "AUTH": "Auth / Backend",
+      "CASE": "Case / Backend",
+      "COMPANY": "Company / Backend",
+      "DELETE_REQUEST": "Delete Request / Backend",
+      "DEPO": "Depo / Backend",
+      "INVITATION": "Invitation / Backend",
+      "LABEL": "Label / Backend",
+      "MEDICAL": "Medical / Backend",
+      "USER": "User / Backend",
       "UNAMED": "Unamed / Backend"
     }
   }
-
-
 }
