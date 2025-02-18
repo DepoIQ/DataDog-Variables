@@ -53,6 +53,7 @@
       "LABEL": "Label / Backend",
       "MEDICAL": "Medical / Backend",
       "USER": "User / Backend",
+      "NOTIFICATION": "Notification / Backend",
       "ELASTICSEARCH": "Elasticsearch / Backend",
       "CHANGESTREAM": "ChangeStream / Backend",
       "UNAMED": "Unamed / Backend"
