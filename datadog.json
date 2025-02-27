@@ -49,6 +49,7 @@
       "COMPANY": "Company / Backend",
       "DELETE_REQUEST": "Delete Request / Backend",
       "DEPO": "Depo / Backend",
+      "MULTIDEPO": "MultiDepo / Backend",
       "INVITATION": "Invitation / Backend",
       "LABEL": "Label / Backend",
       "MEDICAL": "Medical / Backend",
