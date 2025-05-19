@@ -2,18 +2,19 @@ import json
 import os
 from pathlib import Path
 
-# Set the datadog.json's path
-datadog_submodule_path = "src/datadog/datadog.json"
+# Get the directory of the current script
+current_dir = Path(__file__).parent
 
-# Convert the path to os-compatible
-json_file_path = Path(datadog_submodule_path)
+# Set the datadog.json's path relative to the current script
+json_file_path = current_dir / "datadog.json"
 
 try:
     # Load JSON data
     with open(json_file_path, "r") as file:
         DatadogTags = json.load(file)
 except Exception as e:
-    DatadogTag = {
+    # Fallback definition if JSON loading fails
+    DatadogTags = {
                     "STATUS": {
                         "INFO": "info",
                         "WARNING": "warning",
@@ -68,6 +69,10 @@ except Exception as e:
                         "LABEL": "Label / Backend",
                         "MEDICAL": "Medical / Backend",
                         "USER": "User / Backend",
+                        "NOTIFICATION": "Notification / Backend",
+                        "ELASTICSEARCH": "Elasticsearch / Backend",
+                        "CHANGESTREAM": "ChangeStream / Backend",
+                        "USER_LOG": "User Log / Backend",
                         "UNAMED": "Unamed / Backend"
                         }
                     }
