@@ -56,7 +56,8 @@
       "CHANGESTREAM": "ChangeStream / Backend",
       "USER_LOG": "User Log / Backend",
       "UNAMED": "Unamed / Backend",
-      "ANNOTATION": "Annotation / Backend"
+      "ANNOTATION": "Annotation / Backend",
+      "TRACKER": "Tracker / Backend"
     }
   }
 }
