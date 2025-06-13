@@ -8,7 +8,8 @@
     "FRONTEND": "Frontend",
     "BACKEND": "Backend",
     "LAMBDA": "Lambda",
-    "SUMMARY_API": "Summary API"
+    "SUMMARY_API": "Summary API",
+    "MULTIDEPO_API": "MultiDepo API"
   },
   "ENVIRONMENT": {
     "PRODUCTION": "Production",
@@ -24,6 +25,11 @@
       "ADMISSIONS": "Admissions / Summary API",
       "CONTRADICTIONS": "Contradictions / Summary API",
       "UNAMED": "Unamed / Summary API"
+    },
+    "MULTIDEPO_API": {
+      "GENERATE_ANSWER": "Generate Answer / MultiDepo API",
+      "COMPARE_ANSWERS": "Compare Answers / MultiDepo API",
+      "UNAMED": "Unamed / MultiDepo API"
     },
     "LAMBDA": {
       "DATA_INPUT": "Data Input / Lambda",
