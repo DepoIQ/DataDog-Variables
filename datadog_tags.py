@@ -24,7 +24,8 @@ except Exception as e:
                         "FRONTEND": "Frontend",
                         "BACKEND": "Backend",
                         "LAMBDA": "Lambda",
-                        "SUMMARY_API": "Summary API"
+                        "SUMMARY_API": "Summary API",
+                        "MULTIDEPO_API": "MultiDepo API"
                     },
                     "ENVIRONMENT": {
                         "PRODUCTION": "Production",
@@ -41,7 +42,11 @@ except Exception as e:
                         "CONTRADICTIONS": "Contradictions / Summary API",
                         "UNAMED": "Unamed / Summary API"
                         },
-
+                        "MULTIDEPO_API": {
+                        "GENERATE_ANSWER": "Generate Answer / MultiDepo API",
+                        "COMPARE_ANSWERS": "Compare Answers / MultiDepo API",
+                        "UNAMED": "Unamed / MultiDepo API"
+                        },
                         "LAMBDA": {
                         "DATA_INPUT": "Data Input / Lambda",
                         "PARSE_TRANSACTION": "Parse Transaction / Lambda",
@@ -50,13 +55,11 @@ except Exception as e:
                         "GENERATE_PDF": "Generate PDF / Lambda",
                         "UNAMED": "Unamed / Lambda"
                         },
-
                         "FRONTEND": {
                         "APOLLO_CLIENT": "Apollo Client / Frontend",
                         "NEXT_AUTH": "Next Auth / Frontend",
                         "UNAMED": "Unamed / Frontend"
                         },
-
                         "BACKEND": {
                         "RESTFUL_API": "Restful API / Backend",
                         "GRAPHQL_API": "GraphQL API / Backend",
@@ -65,6 +68,7 @@ except Exception as e:
                         "COMPANY": "Company / Backend",
                         "DELETE_REQUEST": "Delete Request / Backend",
                         "DEPO": "Depo / Backend",
+                        "MULTIDEPO": "MultiDepo / Backend",
                         "INVITATION": "Invitation / Backend",
                         "LABEL": "Label / Backend",
                         "MEDICAL": "Medical / Backend",
@@ -73,7 +77,9 @@ except Exception as e:
                         "ELASTICSEARCH": "Elasticsearch / Backend",
                         "CHANGESTREAM": "ChangeStream / Backend",
                         "USER_LOG": "User Log / Backend",
-                        "UNAMED": "Unamed / Backend"
+                        "UNAMED": "Unamed / Backend",
+                        "ANNOTATION": "Annotation / Backend",
+                        "TRACKER": "Tracker / Backend"
                         }
                     }
                 }

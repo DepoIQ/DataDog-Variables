@@ -5,9 +5,10 @@ This guide will help you manage the Git submodule located at `src/datadog` in th
 ## Table of Contents
 
 1. [Adding the Submodule](#adding-the-submodule)
-2. [Updating the Submodule](#updating-the-submodule)
-3. [Pushing Changes to the Submodule](#pushing-changes-to-the-submodule)
-4. [Pulling Changes from the Submodule](#pulling-changes-from-the-submodule)
+2. [Adding the Submodule with Branch Tracking](#adding-the-submodule-with-branch-tracking)
+3. [Updating the Submodule](#updating-the-submodule)
+4. [Pushing Changes to the Submodule](#pushing-changes-to-the-submodule)
+5. [Pulling Changes from the Submodule](#pulling-changes-from-the-submodule)
 
 ---
 
@@ -70,7 +71,83 @@ To add the DataDog Variables repository as a submodule in your own repository, f
    git push origin main
    ```
 
+## Adding the Submodule with Branch Tracking
+
+To add the DataDog Variables repository as a submodule that tracks a specific branch (instead of a specific commit), follow these steps:
+
+1. **Navigate to Your Main Repository**
+
+   Open your terminal and navigate to the directory of the main repository where you want to add the submodule.
+
+   ```bash
+   cd /path/to/your/main/repo
+   ```
+
+2. **Add the Submodule**
+
+   Use the following command to add the submodule. Replace `<submodule-path>` with the desired path and `<branch-name>` with the branch you want to track:
+
+   ```bash
+   git submodule add -b <branch-name> https://github.com/DepoIQ/DataDog-Variables.git <submodule-path>
+   ```
+   
+   Example (tracking the `development` branch):
+
+   ```bash
+   git submodule add -b development https://github.com/DepoIQ/DataDog-Variables.git src/datadog
+   ```
+
+3. **Configure Branch Tracking**
+
+   Configure the submodule to track the specified branch:
+
+   ```bash
+   git config -f .gitmodules submodule.<submodule-path>.branch <branch-name>
+   ```
+
+   Example:
+
+   ```bash
+   git config -f .gitmodules submodule.src/datadog.branch development
+   ```
+
+4. **Initialize and Update the Submodule**
+
+   Initialize and fetch the submodule content:
+
+   ```bash
+   git submodule update --init --recursive --remote
+   ```
+
+5. **Commit the Changes**
+
+   Commit the submodule configuration to your main repository:
+
+   ```bash
+   git add .gitmodules <submodule-path>
+   git commit -m "Added DataDog-Variables as a submodule tracking <branch-name> branch"
+   ```
+
+   Example:
+
+   ```bash
+   git add .gitmodules src/datadog
+   git commit -m "Added DataDog-Variables as a submodule tracking development branch"
+   ```
+
+6. **Push the Changes to Remote**
+
+   Finally, push the changes to the remote repository:
+
+   ```bash
+   git push origin main
+   ```
+
+**Note:** When a submodule tracks a branch, you can update it to the latest commit of that branch using `git submodule update --remote` instead of manually navigating to the submodule directory.
+
 ## Updating the Submodule
+
+### For Commit-Based Submodules
 
 To update the submodule to the latest commit in its remote repository, follow these steps:
 
@@ -97,6 +174,30 @@ To update the submodule to the latest commit in its remote repository, follow th
    ```bash
    git add <submodule-path>
    git commit -m "Updated DataDog-Variables submodule"
+   git push
+   ```
+
+### For Branch-Tracking Submodules
+
+To update a branch-tracking submodule to the latest commit of the tracked branch:
+
+1. **From the main repository directory, run:**
+
+   ```bash
+   git submodule update --remote <submodule-path>
+   ```
+
+   Example:
+
+   ```bash
+   git submodule update --remote src/datadog
+   ```
+
+2. **Commit the updated submodule reference:**
+
+   ```bash
+   git add <submodule-path>
+   git commit -m "Updated DataDog-Variables submodule to latest commit on tracked branch"
    git push
    ```
 
