@@ -63,6 +63,7 @@
       "USER_LOG": "User Log / Backend",
       "UNAMED": "Unamed / Backend",
       "ANNOTATION": "Annotation / Backend",
+      "CRONJOB": "Cronjob / Backend",
       "TRACKER": "Tracker / Backend"
     }
   }
